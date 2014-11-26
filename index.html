@@ -1,0 +1,14 @@
+<!doctype html> <html class="no-js" ng-app="client1App"> <head> <meta charset="utf-8"> <title ng-bind="$root.app.name"></title> <meta name="description" content=""> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.c1b90694.css"> <link rel="stylesheet" href="styles/main.05c0fda5.css">  <body class="{{$root.app.aspect}}"> <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]--> <!-- Add your site or application content here --> <!-- The navbar is only visible if the app is full_page --> <nav class="navbar navbar-default navbar-fixed-top" ng-show="$root.app.aspect == 'full_page'" role="navigation" id="mainNav"> <div class="container"> <!-- Brand and toggle get grouped for better mobile display --> <div class="navbar-header"> <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="/#home" ng-bind="$root.app.name"></a> </div> <!-- Collect the nav links, forms, and other content for toggling --> <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> <ul class="nav navbar-nav"> </ul> <!-- DEV --> <!--
+          <oauth
+            site="http://parasrv12.parachem.ca:7000"
+            client-id="2p5uxhdeomfogwlgh8ae2hfx3t1qu3q3"
+            redirect-uri="http://localhost:9000"
+            response-type="token"
+            template="views/templates/oauth.custom.html"        
+            scope="public">
+          </oauth>
+        --> <!-- PROD --> <oauth site="http://parasrv12.parachem.ca:7000" client-id="2p5uxhdeomfogwlgh8ae2hfx3t1qu3q3" redirect-uri="http://parasrv12.parachem.ca:7002" response-type="token" template="views/templates/oauth.custom.html" scope="public"> </oauth> </div> </div> </nav> <div ng-class="$root.app.aspect == 'full_page' ? 'container' : ''"> <div ng-view=""></div> </div> <!--[if lt IE 9]>
+    <script src="scripts/oldieshim.d48d8270.js"></script>
+    <![endif]--> <script src="scripts/vendor.ff66ab5d.js"></script> <script src="scripts/scripts.f599b02a.js"></script>  
